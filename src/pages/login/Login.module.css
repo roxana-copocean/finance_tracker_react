@@ -1,0 +1,29 @@
+.login-form {
+	max-width: 360px;
+	margin: 60px auto;
+	padding: 20px;
+}
+
+.login-form h2 {
+	font-size: 1.5rem;
+	text-align: center;
+	font-weight: 700;
+	color: var(--clr-light-green);
+}
+
+.login-form label {
+	display: block;
+	margin: 30px auto;
+}
+
+.login-form span {
+	display: block;
+	margin-bottom: 6px;
+}
+
+.login-form input {
+	padding: 8px 6px;
+	font-size: 1rem;
+	color: var(--clr-light-gray);
+	width: 100%;
+}

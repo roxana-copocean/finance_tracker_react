@@ -13,10 +13,12 @@
 }
 
 .title {
+	font-family: 'Caveat Brush', cursive;
+	color: var(--clr-dark-green);
 	margin-right: auto;
-	font-weight: 600;
+	font-weight: 400;
 	letter-spacing: 1px;
-	font-size: 1.2rem;
+	font-size: 1.6rem;
 }
 
 .navbar button,
@@ -25,7 +27,8 @@
 }
 
 .navbar a {
-	color: var(--clr-dark);
+	color: var(--clr-dark-green);
+	font-weight: 600;
 	text-decoration: none;
 }
 

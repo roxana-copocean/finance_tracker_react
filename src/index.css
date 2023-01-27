@@ -1,3 +1,12 @@
+:root {
+	/* colors */
+	--clr-dark: #333;
+	--clr-dark2: 230 35% 7%;
+	--clr-light: #effaf0;
+	--clr-light-green: #1f9751;
+	--clr-white: 0 0% 100%;
+}
+
 /* RESET */
 
 /* Box sizing rules */
@@ -87,15 +96,15 @@ ul {
 }
 .btn {
 	background: none;
-	border: 2px solid #1f9751;
+	border: 2px solid var(--clr-light-green);
 	padding: 6px 12px;
 	border-radius: 4px;
-	color: #1f9751;
+	color: var(--clr-light-green);
 	font-weight: bold;
 	cursor: pointer;
 	font-size: 1em;
 }
 .btn:hover {
-	background: #1f9751;
+	background: var(--clr-light-green);
 	color: #fff;
 }

@@ -7,6 +7,7 @@
 	--clr-light-green: #1f9751;
 	--clr-dark-green: #015d53;
 	--clr-white: 0 0% 100%;
+	--clr-error: #e12a2a;
 }
 
 /* RESET */
@@ -111,4 +112,12 @@ ul {
 .btn:hover {
 	background: var(--clr-light-green);
 	color: #fff;
+}
+
+.error {
+	margin-top: 1rem;
+	text-align: center;
+	color: var(--clr-error);
+	line-height: 1.1;
+	font-style: italic;
 }

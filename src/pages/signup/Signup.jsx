@@ -1,6 +1,7 @@
 import styles from './Signup.module.css';
 import { useState } from 'react';
 import { useSignup } from '../../hooks/useSignup';
+
 export default function Signup() {
 	const [ name, setName ] = useState('');
 	const [ email, setEmail ] = useState('');

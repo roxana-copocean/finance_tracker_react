@@ -1,25 +1,24 @@
-// LOGOUT HOOK
+// LOGIN HOOK
 
 import { useState, useEffect } from 'react';
 import { projectAuth } from '../firebase/config';
 import { useAuthContex } from './useAuthContex';
 
-export const useLogout = () => {
+export const useLogin = () => {
 	const [ isCancelled, setIsCancelled ] = useState(false);
 	const [ error, setError ] = useState(null);
 	const [ isPending, setIsPending ] = useState(false);
 	const { dispatch } = useAuthContex();
 
-	const logout = async () => {
+	const login = async (email, password) => {
 		setError(null);
 		setIsPending(true);
-
-		// sign the user out
 		try {
-			await projectAuth.signOut();
-			//  dispatch logout function
-			dispatch({ type: 'LOGOUT' });
+			// login the user
+			const res = await projectAuth.signInWithEmailAndPassword(email, password);
 
+			// dispatch login function
+			dispatch({ type: 'LOGIN', payload: res.user });
 			// update state
 			if (!isCancelled) {
 				setIsPending(false);
@@ -37,9 +36,8 @@ export const useLogout = () => {
 	useEffect(() => {
 		return () => setIsCancelled(true);
 	}, []);
-
 	return {
-		logout,
+		login,
 		error,
 		isPending
 	};

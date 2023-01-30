@@ -1,12 +1,17 @@
+// LOGIN PAGE
+
 import styles from './Login.module.css';
 import { useState } from 'react';
+import { useLogin } from '../../hooks/useLogin';
+
 export default function Login() {
 	const [ email, setEmail ] = useState('');
 	const [ password, setPassword ] = useState('');
+	const { login, error, isPending } = useLogin();
 
 	const handleFormSubmit = (e) => {
 		e.preventDefault();
-		console.log(email, password);
+		login(email, password);
 	};
 	return (
 		<form className={styles['login-form']} onSubmit={handleFormSubmit}>
@@ -19,7 +24,13 @@ export default function Login() {
 				<span>passwords:</span>
 				<input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 			</label>
-			<button className="btn">Login</button>
+			{!isPending && <button className="btn">Login</button>}
+			{isPending && (
+				<button className="btn" disabled>
+					Loading
+				</button>
+			)}
+			{error && <p className="error">{error}</p>}
 		</form>
 	);
 }

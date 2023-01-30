@@ -1,3 +1,5 @@
+// SIGNUP HOOK
+
 import { useState, useEffect } from 'react';
 import { projectAuth } from '../firebase/config';
 import { useAuthContex } from './useAuthContex';

@@ -30,7 +30,7 @@ export default function Login() {
 					Loading
 				</button>
 			)}
-			{error && <p className="error">{error}</p>}
+			{error && <p className="error">{error.message}</p>}
 		</form>
 	);
 }

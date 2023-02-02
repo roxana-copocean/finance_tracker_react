@@ -67,3 +67,44 @@
 .sidebar li {
 	margin: 10px;
 }
+
+/* Transaction List */
+
+.transactions li {
+	margin: 30px auto;
+	border: 1px solid white;
+	box-shadow: 3px 3px 3px 5px rgba(50, 50, 50, .1);
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	border-left: 4px solid var(--clr-light-green);
+}
+
+.transactions .name {
+	color: var(--clr-dark);
+	font-size: 1.4rem;
+}
+
+.transactions .amount {
+	margin-left: auto;
+	margin-right: 40px;
+	color: var(--clr-dark);
+	font-weight: bold;
+	font-size: 1.6rem;
+}
+
+.transactions button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: var(--clr-light-green2);
+	color: var(--clr-dark);
+	border: none;
+	padding: 12px 8px;
+	text-align: center;
+	line-height: 0;
+	font-size: .9rem;
+	cursor: pointer;
+}

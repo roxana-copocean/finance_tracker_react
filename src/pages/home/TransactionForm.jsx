@@ -1,5 +1,5 @@
-import userEvent from '@testing-library/user-event';
-import React, { useState } from 'react';
+// Transaction Form
+import React, { useState, useEffect } from 'react';
 import { useFirestore } from '../../hooks/useFirestore';
 
 export default function TransactionForm({ uid }) {
@@ -15,6 +15,16 @@ export default function TransactionForm({ uid }) {
 			amount
 		});
 	};
+
+	useEffect(
+		() => {
+			if (response.success) {
+				setAmount('');
+				setName('');
+			}
+		},
+		[ response.success ]
+	);
 	return (
 		<React.Fragment>
 			<h3>Add a Transaction</h3>

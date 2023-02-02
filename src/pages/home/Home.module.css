@@ -97,14 +97,17 @@
 
 .transactions button {
 	position: absolute;
-	top: 0;
-	right: 0;
-	background-color: var(--clr-light-green2);
-	color: var(--clr-dark);
-	border: none;
-	padding: 12px 8px;
-	text-align: center;
+	right: .2rem;
+	top: .2rem;
+	width: 32px;
+	height: 32px;
+	opacity: 0.3;
 	line-height: 0;
-	font-size: .9rem;
+	font-size: 1.3rem;
+	font-weight: 700;
 	cursor: pointer;
+}
+
+.transactions button:hover {
+	opacity: 1;
 }

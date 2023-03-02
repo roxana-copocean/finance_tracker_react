@@ -1,5 +1,5 @@
 **Login**
-![Login](/src/assets/dashboard.jpg)
+![Login](/src/assets/login.jpg)
 
 **Dashboard**
 ![Login](/src/assets/dashboard.jpg)
